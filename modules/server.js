@@ -13,7 +13,7 @@ function start() {
       case '/':
       case '/start':
         handlers.welcome(request, response);
-		break;
+        break;
       case '/upload':
         handlers.upload(request, response);
         break;
