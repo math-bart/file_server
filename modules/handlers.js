@@ -24,7 +24,7 @@ exports.welcome = function(request, response) {
   fs.readFile('templates/start.html', function(err, html) {
     response.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
     response.write(html);
-	response.end(); 
+    response.end(); 
   });	
 }
 
@@ -32,7 +32,7 @@ exports.list = function(request, response) {
   fs.readFile('templates/list.html', function(err, html) {
     response.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
     response.write(html);
-    s.readdir('uploaded_files', 'utf-8', function(err, data) {
+    fs.readdir('uploaded_files', 'utf-8', function(err, data) {
       var data = data;
       var j = data.length;
       for (i=0; i<j; i++) {
